@@ -1,0 +1,41 @@
+{
+    "group_token":"GROUP_TOKEN_GOES_HERE",
+    "owner_id":"OWNER ID GOES HERE, REMOVE QUOTES",
+    "responses": {
+        "response1":"RESPONSE TEXT 1 GOES HERE",
+        "response2":"RESPONSE TEXT 2 GOES HERE",
+        "response3":"RESPONSE TEXT 3 GOES HERE"
+    },
+    "com_symbol": "!",
+    "commands": {
+        "config": {
+            "func": "config",
+            "help": "Конфигурация бота. Первый аргумент - режим. show показывает опции которые можно изменить, show_full показывает JSON файл бота, change изменяет опции, save сохраняет опции в JSON файл.",
+            "public": false
+        },
+        "shutdown": {
+            "func": "exit",
+            "help": "Завершает работу бота.",
+            "public": false
+        },
+        "random": {
+            "func": "random_range",
+            "help": "Выдаёт определённое кол-во случайных чисел. Первые два аргумента - диапазон числа, третий аргумент - количество чисел.",
+            "public": true
+        },
+        "py": {
+            "func": "exec_py",
+            "help": "Выполняет программу Python.",
+            "public": true
+        },
+        "help": {
+            "func": "help",
+            "help": "Выдаёт информацию о команде или все команды. Первый аргумент - режим. Режим all выдаёт список команд и что они делают. Public отвечает за можно или нет обычным пользователям использовать команду. Режим show выдаёт опции одной команды. Третий аргумент - команда.",
+            "public": true
+        }
+    },
+    "changeable_config": {
+        "bool_defense_mode": true,
+        "bool_responses_on": true
+    }
+}

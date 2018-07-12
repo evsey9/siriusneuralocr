@@ -1,2 +1,4 @@
 /.idea
 /config/vkdata.json
+/config/config.json
+/config/config_backup.json

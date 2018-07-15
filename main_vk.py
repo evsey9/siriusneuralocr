@@ -8,8 +8,10 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 import json
 with open('config/config.json', encoding='utf-8') as f:
     config_json = json.load(f)
-group_token = config_json['group_token']
-owner_id = config_json['owner_id']
+with open('config/vk_data.json', encoding='utf-8') as f:
+    vk_data = json.load(f)
+group_token = vk_data['group_token']
+owner_id = vk_data['owner_id']
 responses = {k.lower(): v for k, v in config_json["responses"].items()}
 vk = vk_api.VkApi(token = group_token)
 vk._auth_token()

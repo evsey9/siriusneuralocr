@@ -1,10 +1,9 @@
 {
-    "group_token":"GROUP_TOKEN_GOES_HERE",
-    "owner_id":"OWNER ID GOES HERE, REMOVE QUOTES",
+    "greet":"Здравствуйте. Введите одну из команд: random, facerec и help.",
     "responses": {
-        "response1":"RESPONSE TEXT 1 GOES HERE",
-        "response2":"RESPONSE TEXT 2 GOES HERE",
-        "response3":"RESPONSE TEXT 3 GOES HERE"
+        "Привет": "Пока",
+        "Пока": "Ну давай, иди отсюда!",
+        "Да": "Нет"
     },
     "com_symbol": "!",
     "commands": {

@@ -4,7 +4,9 @@ import numpy as np
 from skimage import io
 cascpath = "data/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascpath)
-def main(url = "http://www.highdefpeople.com/wp-content/uploads/2015/08/HERO-HD-People.jpg", *kwargs):
+def main(url = "", *kwargs):
+    if (url==""):
+        return ["Пожалуйста введите URL изображения."]
     i = 0
     msg = ""
     imgarray = []

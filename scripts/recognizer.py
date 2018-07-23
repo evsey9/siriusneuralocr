@@ -36,9 +36,12 @@ def get_model():
   model.add_module("linear1", torch.nn.Linear(4424, 200))            #линер=декс, типа получилось 384 нейрона
   model.add_module('dropout1', nn.Dropout(p=0.5))                    #ещё минус пол связей
   model.add_module("linear2", torch.nn.Linear(200, 33))           #выходной слой
+  return model
 
 def raspoznavanie(X_batch):
-  model = torch.load("model")
+  model = get_model()
+  #torch.do_something_cool(model)
+  model.load_state_dict(torch.load("model_state_dict"))
   logits = model(Variable(torch.FloatTensor(X_batch)))        #логиты ответы модели
   y_pred = logits.max(1)[1].data.numpy()
   bukvi_pred = []

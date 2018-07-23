@@ -73,8 +73,11 @@ def letter_split(in_arr, out_list, acc=None, m=None):
 
 
 def splitter(image, save_as_image=False, path=None):
+    try:
+        image = Image.fromarray(image)
+    except:
+        pass
     image = image.convert("L")
-
     sz = image.size
     img_np = np.array(image.getdata())
     img_np = img_np.reshape(sz[::-1])
@@ -232,8 +235,8 @@ def splitter(image, save_as_image=False, path=None):
         for x in range(len(letter_list)):
             for y in range(len(letter_list[x])):
                 for z in range(len(letter_list[x][y])):
-                    Image.fromarray(letter_list[x][y][z]).convert('L').save(
-                        path_file + 'img' + str(x) + '.' + str(y) + '.' + str(z) + '.jpg')
+                    Image.fromarray(np.array(letter_list[x][y][z]).astype("uint8")).convert('L').save(
+                        path + 'img' + str(x) + '.' + str(y) + '.' + str(z) + '.jpg')
 
     return letter_list
 

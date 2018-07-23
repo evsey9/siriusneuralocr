@@ -1,6 +1,6 @@
 import string_splitter as ss
 import recognizer as rcg
-
+from skimage import io
 def main(url = "", *kwargs):
     text = ""
     if url == "":

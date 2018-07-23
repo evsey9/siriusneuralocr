@@ -12,4 +12,4 @@ def main(num1 = "1024", num2 = "0", amount = "1", *kwargs):
             randarray = randarray + " " + str(random.randint(num1,num2))
         else:
             randarray = randarray + " " + str(random.randint(num2,num1))
-    return randarray
+    return [randarray]

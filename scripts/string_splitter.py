@@ -184,7 +184,7 @@ def splitter(image, save_as_image=False, path=None):
             letters = []
             h1 = np.sum(word1, axis=0)
             maximum = h1.max()
-            letter_split(word1, letters, acc=3)
+            letter_split(word1, letters, acc=3, m=maximum)
             str2.append(letters)
         letter_list.append(str2)
 

@@ -199,10 +199,10 @@ def splitter(image, save_as_image=False, path=None):
         str1 = []
         for y in range(len(letter_list[x])):
             word1 = []
-            h1 = np.sum(letter_list[x][y], axis=0)
-            maximum = h1.max()
             for z in range(len(letter_list[x][y])):
                 arr_now = letter_list[x][y][z]
+                h1 = np.sum(letter_list[x][y][z], axis=0)
+                maximum = h1.max()
                 if letter_list[x][y][z].shape[1] > mid:
                     accuracy = 50
                     let1 = []
